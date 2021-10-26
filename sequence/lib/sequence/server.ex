@@ -1,8 +1,8 @@
 defmodule Sequence.Server do
   use GenServer
 
-  def start_link(stahs_pid) do
-    {:ok, _pid} = GenServer.start_link(__MODULE__, stahs_pid, name: __MODULE__)
+  def start_link(stash_pid) do
+    {:ok, _pid} = GenServer.start_link(__MODULE__, stash_pid, name: __MODULE__)
   end
 
   def next_number do

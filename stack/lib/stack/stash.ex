@@ -1,11 +1,11 @@
-defmodule Sequence.Stash do
+defmodule Stack.Stash do
   use GenServer
 
   #####
   # External API
 
-  def start_link(current_number) do
-    {:ok,_pid} = GenServer.start_link( __MODULE__, current_number)
+  def start_link(initial_stack) do
+    {:ok,_pid} = GenServer.start_link( __MODULE__, initial_stack)
   end
 
   def save_value(pid, value) do
